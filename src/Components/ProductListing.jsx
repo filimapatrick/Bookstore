@@ -1,8 +1,33 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components'
+import ExclusiveSection from './ExclusiveSection';
+import Input from './Input';
+import PopularSection from './PopularSection';
 
 function ProductListing() {
+
+  const MainPageStyle = styled.div` 
+ 
+  padding:3rem;
+
+  .header{
+    display:flex;
+    justify-content:space-between;
+  }
+  `
   return (
-    <div>ProductListing is the collest of them all</div>
+    <MainPageStyle>
+       <div className='header'>
+          <h1>Explore</h1>
+          <Input/>
+      </div>
+    
+    <div>
+      <PopularSection/>
+      <ExclusiveSection/>
+    </div>
+    
+    </MainPageStyle>
   )
 }
 

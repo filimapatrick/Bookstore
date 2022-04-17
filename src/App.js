@@ -7,14 +7,13 @@ import styled from 'styled-components';
 
 
 
+
+
 const App = () => {
   return (
     <AppStyle>
 
-     <div className='side_bar'>
-            <Sidebar/>  
-         
-      </div>
+     <div className='side_bar'><Sidebar/></div>
 
 
 
@@ -51,10 +50,23 @@ const AppStyle = styled.div`
     }
   }
   .main_page{
-    width: 62rem;
+    width: 80vw;
     margin-left: 22rem;
     padding: 2rem;
     background-color: white;
+    overflow-x:hidden;
+  }
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    .side_bar {
+    display:hidden;
+    }
+
+    .side_bar {
+   width:100%;
+    }
+   
   }
 `;
 export default App;
